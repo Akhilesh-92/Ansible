@@ -1,0 +1,23 @@
+# Task 2: Create Ansible Inventory for App Server Testing
+The Nautilus DevOps team is testing Ansible playbooks on various servers within their stack. They've placed some playbooks under `/home/thor/playbook/` directory on the jump host and now intend to test them on `app server 1` in Stratos DC. However, an inventory file needs creation for Ansible to connect to the respective app. Here are the requirements:
+
+a. Create an ini type Ansible inventory file `/home/thor/playbook/inventory` on jump host.
+
+b. Include `App Server 1` in this inventory along with necessary variables for proper functionality.
+
+c. Ensure the inventory hostname corresponds to the server name as per the wiki, for example `stapp01` for `app server 1` in Stratos DC.
+
+Note: Validation will run the playbook using the command `ansible-playbook -i inventory playbook.yml`. Ensure the playbook works without any additional arguments.
+
+
+## Solution
+1. Create an inventory file with the following contents.
+```
+[appservers]
+stapp01 ansible_host=172.16.238.10 ansible_user=tony ansible_ssh_pass=Ir0nM@n ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+```
+
+2. Run the playbook
+```
+ansible-playbook -i inventory playbook.yml
+```
