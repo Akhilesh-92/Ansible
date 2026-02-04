@@ -1,4 +1,4 @@
-# Task 1: Install Ansible
+# Task 1: Troubleshoot and Create Ansible Playbook
 
 An Ansible playbook needs completion on the jump host, where a team member left off. Below are the details:
 
