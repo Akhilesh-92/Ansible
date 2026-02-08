@@ -62,6 +62,6 @@ This file was created using Ansible on {{ inventory_hostname }}
 ansible-playbook -i inventory playbook.yml
 ```
 
-5. Verify the installed httpd package and copied content by logging into app server 3
+5. Verify the installed httpd package and copied template by logging into app server 3
 
     * ssh banner@172.16.238.12 --> ls -lr /var/www/html/index.html --> cat /var/www/html/index.html
